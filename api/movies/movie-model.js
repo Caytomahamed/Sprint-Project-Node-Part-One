@@ -9,29 +9,29 @@ module.exports = {
 };
 
 function find() {
-  let rows = db('owners')
+  let rows = db('movies')
   return rows;
 }
 
 function findById(id) {
-  return db('owners')
+  return db('movies')
     .where({ id })
     .first();
 }
 
-async function add(owner) {
-  const [id] = await db('owners').insert(owner);
+async function add(movie) {
+  const [id] = await db('movies').insert(movie);
   return findById(id);
 }
 
 function remove(id) {
-  return db('owners')
+  return db('movies')
     .where({ id })
     .del();
 }
 
 function update(id, changes) {
-  return db('owners')
+  return db('movies')
     .where({ id })
     .update(changes, '*');
 }

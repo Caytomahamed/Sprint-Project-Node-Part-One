@@ -1,76 +1,33 @@
 require('dotenv').config();
 const express = require('express');
 
-const ownersDB = require('./movie-model');
-const { requiredName } = require('../middleware/middleware.js');
+// You will need `movie-model.js`
+// The middleware functions also need to be required
 
 const router = express.Router();
 
 router.get('/', async (req, res) => {
-  try {
-    const owners = await ownersDB.find(req.query);
-    
-      res.status(200).json(owners);
-    } catch(err) {
-      res.status(500).json({ message: `Failed to get owners ${err}` });
-    }
+    // RETURN AN ARRAY WITH ALL THE MOVIES
 });
 
-router.get('/hi', (req, res) => {
-      
-        res.status(200).json({ message: `Hello From ${process.env.SAY_HI}` });
-  });
-
-// Get Single Owner
+// Get Single Movie
 router.get('/:id', async (req, res) => {
-    try {
-        const owner = await ownersDB.findById(req.params.id);
-        if(owner) {
-            res.status(200).json(owner);
-        } else {
-            res.status(404).json({ message: 'Owner not found' });
-        }
-    } catch(err) {
-        res.status(500).json({ message: 'Failed to get owner' });
-    }
+    // RETURN THE MOVIE OBJECT
 });
 
-// Add Owner
-router.post('/', requiredName, async (req, res) => {
-    try {
-        const owner = await ownersDB.add(req.body);
-        res.status(201).json(owner);
-    } catch(err) {
-        res.status(500).json({ message: 'Failed to add owner' });
-    }
+// Add movie
+router.post('/', async (req, res) => {
+    // ADD NEW MOVIE TO THE DATABASE
 });
 
-// Update Owner
-router.put('/:id', requiredName, async (req, res) => {
-    try {
-        const owner = await ownersDB.update(req.params.id, req.body);
-        if(owner) {
-            res.status(200).json(owner);
-        } else {
-            res.status(404).json({ message: 'Owner not found' });
-        }
-    } catch(err) {
-        res.status(500).json({ message: 'Failed to update owner' });
-    }
+// Update movie
+router.put('/:id', async (req, res) => {
+    // UPDATE THE MOVIE IN THE DATABASE
 });
 
-// Delete Owner
+// Delete movie
 router.delete('/:id', async (req, res) => {
-    try {
-        const owner = await ownersDB.remove(req.params.id);
-        if(owner) {
-            res.status(200).json(owner);
-        } else {
-            res.status(404).json({ message: 'Owner not found' });
-        }
-    } catch(err) {
-        res.status(500).json({ message: 'Failed to delete owner' });
-    }
+    // DELETE THE MOVIE FROM THE DATABASE
 });
 
 module.exports = router;

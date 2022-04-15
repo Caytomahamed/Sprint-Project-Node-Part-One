@@ -1,22 +1,25 @@
 
 exports.up = function(knex) {
   return knex.schema
-    .createTable('movies', tbl => {
-        tbl.increments('id').notNullable();
-        tbl.string('name');
-        tbl.string('email');
-        tbl.string('created');
-        tbl.string('updated');
-    })
     .createTable('stars', tbl => {
         tbl.increments('id').notNullable();
         tbl.string('name');
-        tbl.string('location');
-        tbl.integer('owner_id')
+        tbl.string('age');
+        tbl.string('image_url');
+        tbl.string('created');
+        tbl.string('updated');
+    })
+    .createTable('movies', tbl => {
+        tbl.increments('id').notNullable();
+        tbl.string('name');
+        tbl.string('release_date');
+        tbl.string('image_url');
+        tbl.string('description');
+        tbl.integer('star_id')
             .unsigned()
             .notNullable()
             .references('id')
-            .inTable('owners')
+            .inTable('stars')
             .onDelete('CASCADE')
             .onUpdate('CASCADE')
         tbl.string('created');
@@ -25,11 +28,11 @@ exports.up = function(knex) {
     .createTable('ratings', tbl => {
         tbl.increments('id').notNullable();
         tbl.integer('rating');
-        tbl.integer('restaurant_id')
+        tbl.integer('movie_id')
             .unsigned()
             .notNullable()
             .references('id')
-            .inTable('restaurants')
+            .inTable('movies')
             .onDelete('CASCADE')
             .onUpdate('CASCADE')
         tbl.string('created');
@@ -38,10 +41,9 @@ exports.up = function(knex) {
 };
 
 exports.down = function(knex) {
-    // Wuxuu u tir tirayaa sida ay u kala hooseeyaa
     return knex.schema
-        .dropTableIfExists('movies')
         .dropTableIfExists('stars')
+        .dropTableIfExists('movies')
         .dropTableIfExists('ratings');
 
         
