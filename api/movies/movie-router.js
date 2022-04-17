@@ -14,11 +14,8 @@ router.get("/", async (req, res) => {
     const movie = await movies.find();
     res.status(200).json(movie);
     console.log(movie);
-    if (!movie) {
-      res.status(200).json([]);
-    }
   } catch (error) {
-    res.status(500).json({ message: `get movies faild ` });
+    res.status(200).json([]);
   }
 });
 

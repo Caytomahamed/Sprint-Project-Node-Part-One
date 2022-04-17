@@ -12,11 +12,8 @@ router.get("/", async (req, res) => {
   try {
     const rate = await rating.find();
     res.status(200).json(rate);
-    if(!rate){
-      res.status(200).json([]);
-    }
   } catch (error) {
-    res.status(404).json({ message: `get ratings faild ${error}` });
+     res.status(200).json([]);
   }
 });
 
@@ -29,8 +26,8 @@ router.get("/:id", async (req, res) => {
     console.log(JSON.stringify(rate));
     res.status(200).json(rate);
   } catch (error) {
-    res.status(400).json({
-      message: ` request body is missing any of the required fields ${error}`,
+    res.status(404).json({
+      message: ` there is no rating with the given ${id}`,
     });
   }
 });
@@ -42,10 +39,10 @@ router.post("/", async (req, res) => {
   console.log(rate);
   try {
     const addRating = await rating.add(rate);
-    res.status(201).json({ ...addRating });
+    res.status(201).json({ id: addRating.id });
   } catch (error) {
     res.status(400).json({
-      message: `request body is missing any of the required fields ${error}`,
+      message: `request body is missing any of the required fields `,
     });
   }
 });
@@ -55,18 +52,17 @@ router.put("/:id", async (req, res) => {
   // UPDATE THE RATING IN THE DATABASE
   let  id  = Number(req.params.id);
   let changes = req.body;
-  console.log(id);
   try {
     const rate = await rating.update(id,changes);
-    res.status(200).json({id});
+    res.status(200).json({id,...changes});
     if (!id) {
-      res.status(404).json({ message: `not found rating give id` });
+      res.status(404).json({ message: `not found rating give ${id}` });
     }
   } catch (error) {
     res
       .status(400)
       .json({
-        message: `request body is missing any of the required fields ${error}`,
+        message: `request body is missing any of the required fields`,
       });
   }
 });
@@ -79,7 +75,7 @@ router.delete("/:id", async (req, res) => {
     const rate = await rating.remove(id);
     res.status(200).json({ id });
   } catch (error) {
-    res.status(404).json({ message: `not found rating` });
+    res.status(404).json({ message: `there is no rating with the given ${id}` });
   }
 });
 
