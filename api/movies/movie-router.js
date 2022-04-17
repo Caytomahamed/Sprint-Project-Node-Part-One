@@ -5,6 +5,8 @@ const express = require("express");
 // You will need `movie-model.js`
 const movies = require("./movie-model.js");
 // The middleware functions also need to be required
+// import middleware functions
+const {  checkReleaseDate } = require("../../middleware/index.js");
 
 const router = express.Router();
 
@@ -36,7 +38,7 @@ router.get("/:id", async (req, res) => {
 });
 
 // Add movie
-router.post("/", async (req, res) => {
+router.post("/",  checkReleaseDate, async (req, res) => {
   // ADD NEW MOVIE TO THE DATABASE
   let movie = req.body;
   try {

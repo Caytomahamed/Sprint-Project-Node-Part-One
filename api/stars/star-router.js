@@ -4,7 +4,7 @@ const express = require("express");
 // You will need `star-model.js`
 const stars = require("./star-model.js");
 // The middleware functions also need to be required
-
+const { checkStarAge } = require("../../middleware/index.js");
 const router = express.Router();
 
 router.get("/", async (req, res) => {
@@ -30,7 +30,7 @@ router.get("/:id", async (req, res) => {
 });
 
 // Add star
-router.post("/", async (req, res) => {
+router.post("/", checkStarAge, async (req, res) => {
   // ADD NEW STAR TO THE DATABASE
   let starpost = req.body;
   try {
