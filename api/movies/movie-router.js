@@ -60,9 +60,11 @@ router.put("/:id", async (req, res) => {
   try {
     const movie = await movies.update(id, changes);
     res.status(200).json({ id, ...changes });
-    
-    if(movie.id !== id){
-      res.status(404).json({ message: `there is no movie with the given ${id}` });
+
+    if (movie.id !== id) {
+      res
+        .status(404)
+        .json({ message: `there is no movie with the given ${id}` });
     }
   } catch (error) {
     res.status(400).json({
@@ -74,10 +76,10 @@ router.put("/:id", async (req, res) => {
 // Delete movie
 router.delete("/:id", async (req, res) => {
   // DELETE THE MOVIE FROM THE DATABASE
-  let  id  = Number(req.params.id);
+  let id = Number(req.params.id);
   try {
     const movei = await movies.remove(id);
-    res.status(200).json({id });
+    res.status(200).json({ id });
   } catch (error) {
     res
       .status(404)

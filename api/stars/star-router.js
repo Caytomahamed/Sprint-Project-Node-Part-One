@@ -23,12 +23,9 @@ router.get("/:id", async (req, res) => {
   let { id } = req.params;
   try {
     const star = await stars.findById(id);
-    console.log(JSON.stringify(star));
     res.status(200).json(star);
   } catch (error) {
-    res
-      .status(404)
-      .json({ message: `there is no star with the given ${id} ${error}` });
+    res.status(404).json({ message: `there is no star with the given ${id} ` });
   }
 });
 
@@ -38,9 +35,11 @@ router.post("/", async (req, res) => {
   let starpost = req.body;
   try {
     const star = await stars.add(starpost);
-    res.status(201).json({ id : star.id });
+    res.status(201).json({ id: star.id });
   } catch (error) {
-    res.status(404).json({ message: `request body is missing any of the required fields ${error}` });
+    res
+      .status(400)
+      .json({ message: `request body is missing any of the required fields` });
   }
 });
 
@@ -50,15 +49,16 @@ router.put("/:id", async (req, res) => {
   let { id } = req.params;
   let changes = req.body;
   try {
-    const star = await stars.update(id,changes);
-    res.status(201).json({ id });
-    
-    if(!star.hasownProperty(id)){
-      res.status(404).json({ message: `there is no star with the given ${id}` });
+    const star = await stars.update(id, changes);
+    res.status(201).json({ id, ...changes });
+    if (!star.hasownProperty(id)) {
+      res
+        .status(404)
+        .json({ message: `there is no star with the given ${id}` });
     }
   } catch (error) {
-    res.status(404).json({
-      message: `request body is missing any of the required fields ${error}`,
+    res.status(400).json({
+      message: `request body is missing any of the required fields`,
     });
   }
 });
@@ -72,7 +72,7 @@ router.delete("/:id", async (req, res) => {
     res.status(200).json({ id });
   } catch (error) {
     res.status(404).json({
-      message: `there is no star with the given ${id} ${error}`,
+      message: `there is no star with the given ${id}`,
     });
   }
 });
