@@ -1,29 +1,33 @@
+# API Documentation
 ## Introduction
 
 In meeting the minimum viable product (MVP) specifications listed below, your project should provide an API that has Create, Read, Update and Delete (CRUD) functionality for all `Movies`, `Stars` and `Ratings`.
-#### Endpoints
 
-- [ ] `[GET] /api/movies`
-- [ ] `[GET] /api/movies/:id`
-- [ ] `[POST] /api/movies`
-- [ ] `[PUT] /api/movies/:id`
-- [ ] `[DELETE] /api/movies/:id`
+## Endpoints
+### Movies 
 
-- [ ] `[GET] /api/stars`
-- [ ] `[GET] /api/stars/:id`
-- [ ] `[POST] /api/stars`
-- [ ] `[PUT] /api/stars/:id`
-- [ ] `[DELETE] /api/stars/:id`
+- [ ] `[GET] https://spring-node-js-one.herokuapp.com/api/movies`
+- [ ] `[GET] https://spring-node-js-one.herokuapp.com/api/movies/:id`
+- [ ] `[POST] https://spring-node-js-one.herokuapp.com/api/movies`
+- [ ] `[PUT] https://spring-node-js-one.herokuapp.com/api/movies/:id`
+- [ ] `[DELETE] https://spring-node-js-one.herokuapp.com/api/movies/:id`
 
-- [ ] `[GET] /api/ratings`
-- [ ] `[GET] /api/ratings/:id`
-- [ ] `[POST] /api/ratings`
-- [ ] `[PUT] /api/ratings/:id`
-- [ ] `[DELETE] /api/ratings/:id`
+### Stars
 
-#### Deploy Your Project
+- [ ] `[GET] https://spring-node-js-one.herokuapp.com/api/stars`
+- [ ] `[GET] https://spring-node-js-one.herokuapp.com/api/stars/:id`
+- [ ] `[POST] https://spring-node-js-one.herokuapp.com/api/stars`
+- [ ] `[PUT] https://spring-node-js-one.herokuapp.com/api/stars/:id`
+- [ ] `[DELETE] https://spring-node-js-one.herokuapp.com/api/stars/:id`
 
-- [ ] Once you're done with all changes, make sure to deploy your project to Heroku and make sure to add all the ENVIROMENT VARIABLES needed for Heroku to run.
+### Rating
+
+- [ ] `[GET] https://spring-node-js-one.herokuapp.com/api/ratings`
+- [ ] `[GET] https://spring-node-js-one.herokuapp.com/api/ratings/:id`
+- [ ] `[POST] https://spring-node-js-one.herokuapp.com/api/ratings`
+- [ ] `[PUT] https://spring-node-js-one.herokuapp.com/api/ratings/:id`
+- [ ] `[DELETE] https://spring-node-js-one.herokuapp.com/api/ratings/:id`
+
 ## Interview Questions
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
