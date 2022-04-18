@@ -7,7 +7,7 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 ### Movies 
 
 - [ ] `[GET] https://spring-node-js-one.herokuapp.com/api/movies`
-- [ ] `[GET] https://spring-node-js-one.herokuapp.com/api/movies/:id`
+- [ ] `[GET BY ID] https://spring-node-js-one.herokuapp.com/api/movies/:id`
 - [ ] `[POST] https://spring-node-js-one.herokuapp.com/api/movies`
 - [ ] `[PUT] https://spring-node-js-one.herokuapp.com/api/movies/:id`
 - [ ] `[DELETE] https://spring-node-js-one.herokuapp.com/api/movies/:id`
@@ -15,7 +15,7 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 ### Stars
 
 - [ ] `[GET] https://spring-node-js-one.herokuapp.com/api/stars`
-- [ ] `[GET] https://spring-node-js-one.herokuapp.com/api/stars/:id`
+- [ ] `[GET BY ID] https://spring-node-js-one.herokuapp.com/api/stars/:id`
 - [ ] `[POST] https://spring-node-js-one.herokuapp.com/api/stars`
 - [ ] `[PUT] https://spring-node-js-one.herokuapp.com/api/stars/:id`
 - [ ] `[DELETE] https://spring-node-js-one.herokuapp.com/api/stars/:id`
@@ -23,7 +23,7 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 ### Rating
 
 - [ ] `[GET] https://spring-node-js-one.herokuapp.com/api/ratings`
-- [ ] `[GET] https://spring-node-js-one.herokuapp.com/api/ratings/:id`
+- [ ] `[GET BY ID] https://spring-node-js-one.herokuapp.com/api/ratings/:id`
 - [ ] `[POST] https://spring-node-js-one.herokuapp.com/api/ratings`
 - [ ] `[PUT] https://spring-node-js-one.herokuapp.com/api/ratings/:id`
 - [ ] `[DELETE] https://spring-node-js-one.herokuapp.com/api/ratings/:id`
