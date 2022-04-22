@@ -28,17 +28,8 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 - [ ] `[PUT] https://spring-node-js-one.herokuapp.com/api/ratings/:id`
 - [ ] `[DELETE] https://spring-node-js-one.herokuapp.com/api/ratings/:id`
 
-## Interview Questions
-
-Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
-
-1. The core features of Node.js and Express and why they are useful.
-2. Understand and explain the use of Middleware.
-3. The basic principles of the REST architectural style.
-4. Understand and explain the use of Express Routers.
-5. Why do we use `Postman` instead of just the browser.
-
 ## ANS : 
+
 - [ ] **1**
 > Middleware => waxa waxa eeye function kaa soo qaata si parameter ahaana **res** and **req** ee object markaa hal kaa waxa aad ku samaynkartaa isbadalo waxaanad ku xidhikartaa xaalodo `
 > Routing  => waxa wee sida loo badal  **req**  iyadoo loo eegaayo URL ka `
@@ -48,7 +39,7 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 > - Separation of client and server
 > - Statelessness
 > - Caching
-- Layered architecture
+> - Layered architecture
 - [ ] **4**
 > ` Routing  => waxa wee sida loo badal  **req**  iyadoo loo eegaayo URL ka `
 - [ ] **5**
