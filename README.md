@@ -45,11 +45,11 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 - [ ] **2**
  > Middleware => waxa waxa eeye function kaa soo qaata si parameter ahaana **res** and **req** ee object markaa hal kaa waxa aad ku samaynkartaa isbadalo waxaanad ku xidhikartaa xaalodo `
 - [ ] **3**
-- Separation of client and server
-- Statelessness
-- Caching
+> - Separation of client and server
+> - Statelessness
+> - Caching
 - Layered architecture
 - [ ] **4**
-` Routing  => waxa wee sida loo badal  **req**  iyadoo loo eegaayo URL ka `
+> ` Routing  => waxa wee sida loo badal  **req**  iyadoo loo eegaayo URL ka `
 - [ ] **5**
 > ` waxa loogu istcimaali waaya waxa wee yaan CORS policy taas oo macnaheedu yahay in kaliya loo isticmaali karo browserka **Request**`
