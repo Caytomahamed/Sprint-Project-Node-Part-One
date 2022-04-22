@@ -28,7 +28,7 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 - [ ] `[PUT] https://spring-node-js-one.herokuapp.com/api/ratings/:id`
 - [ ] `[DELETE] https://spring-node-js-one.herokuapp.com/api/ratings/:id`
 
-## ANS : 
+## ANSWERS : 
 
 - [ ] **1**
 > Middleware => waxa waxa eeye function kaa soo qaata si parameter ahaana **res** and **req** ee object markaa hal kaa waxa aad ku samaynkartaa isbadalo waxaanad ku xidhikartaa xaalodo `
