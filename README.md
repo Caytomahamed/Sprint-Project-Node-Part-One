@@ -39,7 +39,7 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 5. Why do we use `Postman` instead of just the browser.
 
 ## ANS : 
-[ ] `[**1**]`
+- [ ] `[**1**]`
 `  Middleware => waxa waxa eeye function kaa soo qaata si parameter ahaana **res** and **req** ee object markaa hal kaa waxa aad ku samaynkartaa isbadalo waxaanad ku xidhikartaa xaalodo `
 `  Routing  => waxa wee sida loo badal  **req**  iyadoo loo eegaayo URL ka `
 ` [ ] **2**`
