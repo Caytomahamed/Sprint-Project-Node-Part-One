@@ -41,6 +41,6 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 > - Caching
 > - Layered architecture
 - [ ] **4**
-> ` Routing  => waxa wee sida loo badal  **req**  iyadoo loo eegaayo URL ka `
+>  Routing  => waxa wee sida loo badal  **req**  iyadoo loo eegaayo URL ka 
 - [ ] **5**
-> ` waxa loogu istcimaali waaya waxa wee yaan CORS policy taas oo macnaheedu yahay in kaliya loo isticmaali karo browserka **Request**`
+>  waxa loogu istcimaali waaya waxa wee yaan CORS policy taas oo macnaheedu yahay in kaliya loo isticmaali karo browserka **Request**
