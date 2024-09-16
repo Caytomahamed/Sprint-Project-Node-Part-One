@@ -46,6 +46,4 @@ exports.down = function(knex) {
         .dropTableIfExists('movies')
         .dropTableIfExists('ratings');
 
-        
-  
 };
